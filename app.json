@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/play/play",
+    "pages/collection/collection"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#594d9c",
+    "navigationBarTitleText": "开眼视频",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#3e5b68",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "开眼视频",
+        "iconPath": "/pages/images/video.png",
+        "selectedIconPath": "/pages/images/video_select.png"
+      },
+      {
+        "pagePath": "pages/collection/collection",
+        "text": "收藏",
+        "iconPath": "/pages/images/like.png",
+        "selectedIconPath": "/pages/images/like_select.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

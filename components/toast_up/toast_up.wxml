@@ -1,0 +1,21 @@
+<view class="toast-up {{isCommentShow?'show':'hide'}}">
+  <view class="mask" bindtap='bindUpCancel' capture-catch:touchmove="preventdefault"></view>
+  <view class="toast-cont {{isCommentShow?'toast-cont-act':''}}">
+    <view class='title'>
+      <text>评论</text>
+      <image  bindtap='bindUpCancel' class='cancel' mode='aspectFit' src='/pages/images/close.png' />
+    </view>
+    <scroll-view scroll-y class="cont">
+      <view class='cont-li' wx:for="{{commentList}}" wx:key="{{index}}">
+        <view class='li-t'>
+          <image class='name-img' mode='aspectFit' src='{{item.img}}' />
+          <view class='li-t-r'>
+            <view class='name'>{{item.name}}</view>
+            <view class='time'>{{item.time}}</view>
+          </view>
+        </view>
+        <text class='li-c'>{{item.cont}}</text>
+      </view>
+    </scroll-view>
+  </view>
+</view>

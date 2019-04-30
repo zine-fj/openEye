@@ -1,0 +1,172 @@
+@import '../../components/toast_up/toast_up.wxss';
+
+.ky-play {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+}
+
+.ky-play .video {
+  width: 100%;
+  height: 400rpx;
+}
+
+.ky-play .video-h {
+  padding: 10rpx 20rpx;
+  background: #fff;
+  margin-top: -10rpx;
+}
+
+.ky-play .video-h .title {
+  font-size: 30rpx;
+}
+
+.ky-play .video-h .category {
+  font-size: 24rpx;
+  color: #444;
+  margin: 20rpx 0;
+}
+
+.ky-play .video-h .description {
+  font-size: 30rpx;
+  color: #444;
+  line-height: 1.5;
+}
+
+.ky-play .video-h .consumption {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  margin: 25rpx 0;
+}
+.ky-play .consumption-li {
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  color: #444;
+}
+.ky-play .share {
+  position: relative;
+}
+.ky-play .share .share-button {
+  position: absolute;
+  left:0;
+  top:0;
+  width:100rpx;
+  height:40rpx;
+  opacity:0;
+}
+.ky-play .consumption image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+
+/* 作者 */
+
+.ky-play .author {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  border: 1rpx solid #ddd;
+  border-left: none;
+  border-right: none;
+  padding: 20rpx;
+  box-sizing: border-box;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.ky-play .author image {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+  flex: none;
+}
+
+.ky-play .author .name {
+  font-size: 26rpx;
+  margin-bottom: 10rpx;
+}
+
+.ky-play .author .description {
+  font-size: 22rpx;
+}
+
+/* 其他视频 */
+.other-video {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 20rpx;
+}
+.other-li {
+  margin-bottom: 30rpx;
+}
+.other-li .title{
+  font-size: 34rpx;
+  margin-bottom: 20rpx;
+}
+.other-scroll {
+  width: 100%;
+  height: 400rpx;
+  white-space: nowrap;
+  display: flex;
+}
+.other-scroll .scroll-li {
+  width: 70%;
+  height: 400rpx;
+  position: relative;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: column;
+  margin-right: 20rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 10rpx;
+  overflow: hidden;
+  background: #fff;
+}
+.scroll-li .other-img {
+  width: 100%;
+  height: 280rpx;
+  box-sizing: border-box;
+}
+.scroll-li .other-time {
+  position: absolute;
+  right: 20rpx;
+  bottom: 140rpx;
+  font-size: 26rpx;
+  background: rgba(0,0,0,.2);
+  color: #fff;
+  padding: 5rpx 10rpx;
+}
+.scroll-li .li-cl {
+  box-sizing: border-box;
+  width: 100%;
+  height: 120rpx;
+  font-size: 26rpx;
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+}
+.scroll-li .li-cl-l {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+  flex: none;
+}
+.scroll-li .li-cl-r {
+  width: 100%;
+}
+.scroll-li .li-title,.li-author {
+  width: calc(100% - 60rpx);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.scroll-li .li-title {
+  margin-bottom: 10rpx;
+}

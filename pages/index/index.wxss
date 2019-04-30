@@ -1,0 +1,73 @@
+/* pages/kaiyan/kaiyan.wxss */
+
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.video-list {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 30rpx 0;
+}
+
+.video-li {
+  width: 95%;
+  height: 400rpx;
+  box-sizing: border-box;
+  position: relative;
+  left: 0;
+  top: 0;
+  margin: 0 auto 30rpx;
+  box-shadow: 0 0 10rpx #ddd;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.video-li image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.video-li .words {
+  position: absolute;
+  left: 20rpx;
+  bottom: 20rpx;
+  color: #fff;
+  z-index: 2;
+  width: calc(100% - 40rpx);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.video-li .words-left {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10rpx;
+  width: 70%;
+}
+
+.video-li .title {
+  font-size: 28rpx;
+}
+.video-li .title,
+.video-li .slogan {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.video-li .slogan, .video-li .video-time {
+  font-size: 24rpx;
+}
+
+.video-li .video-time {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10rpx;
+}

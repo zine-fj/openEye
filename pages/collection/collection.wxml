@@ -1,0 +1,27 @@
+<!-- 中国色 -->
+<view class='collection' style='background: rgba({{bg.rgba}})'>
+
+  <!-- 开眼视频 -->
+  <view class='collec-videos' wx:if="{{nowNav == 'kysp'}}">
+    <view class='video-li' wx:for="{{videosList}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap='bindVideo'>
+      <image class='video-cancel' mode='aspectFit' src='{{videoCancelImg}}' data-id='{{index}}' catchtap='bindVideoCancel' />
+      <view class='video-img'>
+        <image class='img' mode='aspectFill' src='{{item.poster}}' />
+        <text class='time'>{{item.videoTime}}</text>
+      </view>
+      <view class='video-cont'>
+        <view class='cont-title'>{{item.title}}</view>
+        <view class='cont-category'>{{item.category}}</view>
+        <view class='cont-b'>
+          <image class='author-img' mode='aspectFit' src='{{item.authorImg}}' />
+          <view class='cont-r-author'>{{item.authorName}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="no-collection {{isNoCollec}} {{isNoCollec?'':'hide'}}">
+    <view class='word'>暂无收藏</view>
+    <button size='mini' bindtap='bindToAdd'>去添加</button>
+  </view>
+</view>

@@ -1,0 +1,52 @@
+<include src="../../components/toast_up/toast_up.wxml" />
+<view class='ky-play' style='background: rgba({{bg.rgba}})'>
+  <video class='video' custom-cache="{{false}}" object-fit='fill' poster='{{videoLi.poster}}' src='{{videoLi.video}}' controls></video>
+  <view class='video-h'>
+    <view class='title'>{{videoLi.title}}</view>
+    <view class='category'>{{videoLi.category}}  /  {{videoLi.videoTime}}</view>
+    <view class='description'>{{videoLi.description}}</view>
+    <view class='consumption'>
+      <view class='consumption-li like' data-type="like" data-id="{{videoLi.id}}" bindtap='bindVideoType'>
+        <image mode='aspectFit' src="{{videoLi.isCollection?heartSelectImg:heartImg}}" />
+        <text>{{videoLi.like}}</text>
+      </view>
+      <view class='consumption-li share'>
+        <image mode='aspectFit' src='{{shareImg}}' />
+        <text>{{videoLi.share}}</text>
+        <button open-type='share' class='share-button' type='mini' data-type="share" bindtap='bindVideoType'></button>
+      </view>
+      <view class='consumption-li comment' data-type="comment" bindtap='bindVideoType'>
+        <image mode='aspectFit' src='{{commentImg}}' />
+        <text>{{videoLi.comment}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='author'>
+    <image mode='aspectFit' src='{{videoLi.authorImg}}' />
+    <view class='author-info'>
+      <view class='name'>{{videoLi.authorName}}</view>
+      <view class='description'>{{videoLi.authorDes}}</view>
+    </view>
+  </view>
+
+  <!-- 其他视频 -->
+  <view class='other-video'>
+    <view class='other-li' wx:for="{{otherVideoList}}" wx:key="{{index}}">
+      <view class='title'>{{item.title}}：</view>
+      <scroll-view class='other-scroll' scroll-x="true" >
+        <view class='scroll-li' wx:for="{{item.videoArr}}" wx:key="{{index}}" wx:for-item="videoItem" data-id="{{videoItem.id}}" bindtap='bindOtherVideo'>
+          <image class='other-img' mode='aspectFill' src='{{videoItem.img}}' />
+          <view class='other-time'>{{videoItem.videoTime}}</view>
+          <view class='li-cl'>
+            <image class='li-cl-l' mode='aspectFill' src='{{videoItem.authorImg}}' />
+            <view class='li-cl-r'>
+              <view class='li-title'>{{videoItem.title}}</view>
+              <view class='li-author'>{{videoItem.author}}</view> 
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

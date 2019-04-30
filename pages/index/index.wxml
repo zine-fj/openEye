@@ -1,0 +1,13 @@
+<!--pages/kaiyan/kaiyan.wxml-->
+<view class='video-list'>
+  <view class='video-li' wx:for="{{infoList}}" wx:key="{{index}}" data-id='{{item.id}}' bindtap='bindKanYan'>
+    <image src='{{item.cover.detail}}' mode='aspectFill' />
+    <view class='words'>
+      <view class='words-left'>
+        <view class='title'>{{item.title}}</view>
+        <view class='slogan'>{{item.slogan}}</view>
+      </view>
+      <view class='video-time'>{{item.videoTime}}</view>
+    </view>
+  </view>
+</view>
