@@ -5,11 +5,19 @@
 ```shell
 let eyeUrl = https://baobab.kaiyanapp.com
 ```
-1、获取推荐视频 
->${eyeUrl}/api/v4/tabs/selected
+1、获取推荐视频
+```shell
+${eyeUrl}/api/v4/tabs/selected
+```
 2、获取当前视频信息
->${eyeUrl}/api/v1/video/${id}
+```shell
+${eyeUrl}/api/v1/video/${id}
+```
 3、获取当前视频评论
->${eyeUrl}/api/v1/replies/video?id=${id}&num=${num}
+```shell
+${eyeUrl}/api/v1/replies/video?id=${id}&num=${num}
+```
 4、获取推荐视频信息
->${eyeUrl}/api/v4/video/related?id=${id}
+```shell
+${eyeUrl}/api/v4/video/related?id=${id}
+```
